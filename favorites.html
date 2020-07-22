@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="favs"></div>
+
+  <!-- <div id="myFavs"></div>
+  <div id="yourFavs"></div> -->
+
+  <script>
+
+    let movie = 'movie1'
+    let song = 'song1'
+    let game = 'game1'
+    let food = 'food1'
+
+    let uMovie = prompt('What is your favorite movie?')
+
+    if (movie === uMovie) {
+      alert('Hey! That is my favorite too!')
+    }
+
+    let uSong = prompt('What is your favorite song?')
+
+    if (song === uSong) {
+      alert('Hey! That is my favorite too!')
+    }
+
+    let uGame = prompt('What is your favorite game?')
+
+    if (game === uGame) {
+      alert('Hey! That is my favorite too!')
+    }
+
+    let uFood = prompt('What is your favorite food?')
+
+    if (food === uFood) {
+      alert('Hey! That is my favorite too!')
+    }
+
+    let myFavsElem = document.createElement('div')
+    myFavsElem.id = 'myFavs'
+    myFavsElem.innerHTML = `
+      <p>Favorite Movie: ${movie}</p>
+      <p>Favorite Song: ${song}</p>
+      <p>Favorite Game: ${game}</p>
+      <p>Favorite Food: ${food}</p>
+    `
+    let yourFavsElem = document.createElement('div')
+    yourFavsElem.id = 'yourFavs'
+    yourFavsElem.innerHTML = `
+      <p>Favorite Movie: ${uMovie}</p>
+      <p>Favorite Song: ${uSong}</p>
+      <p>Favorite Game: ${uGame}</p>
+      <p>Favorite Food: ${uFood}</p>
+    `
+
+    document.getElementById('favs').append(myFavsElem)
+    document.getElementById('favs').append(yourFavsElem)
+
+
+    // document.getElementById('myFavs').innerHTML = `
+      // <p>Favorite Movie: ${movie}</p>
+      // <p>Favorite Song: ${song}</p>
+      // <p>Favorite Game: ${game}</p>
+      // <p>Favorite Food: ${food}</p>
+    // `
+    // document.getElementById('yourFavs').innerHTML = `
+      // <p>Favorite Movie: ${uMovie}</p>
+      // <p>Favorite Song: ${uSong}</p>
+      // <p>Favorite Game: ${uGame}</p>
+      // <p>Favorite Food: ${uFood}</p>
+    // `
+
+  </script>
+</body>
+
+</html>
